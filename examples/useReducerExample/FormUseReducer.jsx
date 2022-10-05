@@ -25,6 +25,14 @@ const FormUseReducer = () => {
   const handleReset = (e) => {
     dispatch({ type: "reset" })
   }
+
+  const handleName = (e) =>{
+    dispatch({ type: "setName",payload: e.target.value })
+  }
+
+  const handleAge = (e) => {
+     dispatch({ type: "setAge",payload:e.target.value })
+  }
   return (
     <div>
       <h3>Ejemplo useReducer</h3>
@@ -32,9 +40,9 @@ const FormUseReducer = () => {
       <br />
       age: {state.age}
       <br />
-      Name: <input type="text" onChange={(e) => dispatch({ type: "setName",payload: e.target.value })} placeholder="name" />
+      Name: <input type="text" onChange={handleName} placeholder="name" />
       Age:
-      <input onChange={(e) => dispatch({ type: "setAge",payload:e.target.value })} placeholder="age" />
+      <input onChange={handleAge} placeholder="age" />
       <button onClick={handleReset}>Reset</button>
     </div>
   );
