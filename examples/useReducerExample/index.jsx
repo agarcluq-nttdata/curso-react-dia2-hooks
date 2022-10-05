@@ -16,7 +16,7 @@ const UseReducerExample = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <>
-      <h2>UseReducer</h2>
+      <h3>UseReducer</h3>
       Count: {state.count}
       <button onClick={() => dispatch({ type: "increment" })}>+</button>
       <button onClick={() => dispatch({ type: "decrement" })}>-</button>

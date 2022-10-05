@@ -14,8 +14,8 @@ const UseCallbackExample = () => {
   const memoizedSetCountTwo = useCallback(() => setCountTwo(countTwo + 1), [countTwo])
   return (
     <>
-        <h2>UseCallback</h2>
-        <h3>{countOne} {countTwo}</h3>
+        <h3>UseCallback</h3>
+        <h4>{countOne} {countTwo}</h4>
         <Button handleClick={memoizedSetCountOne} name="button1" />
         <Button handleClick={memoizedSetCountTwo} name="button1" />
     </>

@@ -5,7 +5,7 @@ const UseStateExample = () => {
   const onRemove = () => {};
   return (
     <div>
-      <h1>Counter useState</h1>
+      <h3>Counter useState</h3>
       count:
       <br />
       <button onClick={onAdd}>Add</button>
