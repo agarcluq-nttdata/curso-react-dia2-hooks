@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useRef } from 'react';
 
 const init = (initialState) => {
   return {age:initialState.age,name:initialState.name}
@@ -19,7 +19,12 @@ function reducer(state, action) {
 }
 
 const FormUseReducer = () => {
+  const inputNumber = useRef(null)
   const [state, dispatch] = useReducer(reducer, initialState,init);
+
+  const handleReset = (e) => {
+    dispatch({ type: "reset" })
+  }
   return (
     <div>
       <h3>Ejemplo useReducer</h3>
@@ -29,8 +34,8 @@ const FormUseReducer = () => {
       <br />
       Name: <input type="text" onChange={(e) => dispatch({ type: "setName",payload: e.target.value })} placeholder="name" />
       Age:
-      <input type="number" onChange={(e) => dispatch({ type: "setAge",payload:e.target.value })} placeholder="age" />
-      <button onClick={(e) => dispatch({ type: "reset" })}>Reset</button>
+      <input onChange={(e) => dispatch({ type: "setAge",payload:e.target.value })} placeholder="age" />
+      <button onClick={handleReset}>Reset</button>
     </div>
   );
 };
