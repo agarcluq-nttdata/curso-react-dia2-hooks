@@ -5,7 +5,7 @@ const Button = React.memo(({handleClick, name}) => {
   return <button onClick={handleClick}>{name}</button>
 })
 
-const Counter = () => {
+const UseCallbackExample = () => {
   console.log('counter rendered')
   const [countOne, setCountOne] = useState(0)
   const [countTwo, setCountTwo] = useState(0)
@@ -19,3 +19,5 @@ const Counter = () => {
     </>
   )
 }
+
+export default UseCallbackExample;
