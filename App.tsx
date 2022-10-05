@@ -1,6 +1,7 @@
 import * as React from 'react';
 import UseStateExample from './examples/useStateExample';
 import UseCallbackExample from './examples/useCallbackExample';
+import UseReducerExample from './examples/useReducerExample'
 import './style.css';
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
 
       <UseStateExample />
       <UseCallbackExample/>
+      <UseReducerExample/>
     </div>
   );
 }
